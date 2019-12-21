@@ -46,6 +46,13 @@ public class LogEntity {
 	public void setAction(String action) {
 		this.action = action;
 	}
+	public LogEntity(String logid, String eventid, String userid, String action) {
+		super();
+		this.logid = logid;
+		this.eventid = eventid;
+		this.userid = userid;
+		this.action = action;
+	}
 	
 
 }
