@@ -38,13 +38,13 @@ public class LogRepo {
 		for (Map<String, AttributeValue> item : result.getItems()){
 			AttributeValue logidAV = item.getOrDefault("logid", new AttributeValue());
 		    String logid = logidAV.getS();
-		    AttributeValue eventidAV = item.getOrDefault("eventid", new AttributeValue());
-		    String eventid = eventidAV.getS();
-		    AttributeValue useridAV = item.getOrDefault("userid", new AttributeValue());
-		    String userid = useridAV.getS();
+		    AttributeValue eventnameAV = item.getOrDefault("eventname", new AttributeValue());
+		    String eventname = eventnameAV.getS();
+		    AttributeValue usernameAV = item.getOrDefault("username", new AttributeValue());
+		    String username = usernameAV.getS();
 		    AttributeValue actionAV = item.getOrDefault("action", new AttributeValue());
 		    String action = actionAV.getS();
-		    LogEntity record = new LogEntity(logid, eventid, userid, action);
+		    LogEntity record = new LogEntity(logid, eventname, username, action);
 		    logs.add(record);
 		}
 		return logs;

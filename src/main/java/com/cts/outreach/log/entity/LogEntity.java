@@ -10,8 +10,8 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 public class LogEntity {
 	
 	private String logid;
-	private String eventid;
-	private String userid;
+	private String eventname;
+	private String username;
 	private String action;
 	
 	@DynamoDBHashKey(attributeName="logid")
@@ -23,20 +23,20 @@ public class LogEntity {
 		this.logid = logid;
 	}
 	
-	@DynamoDBRangeKey(attributeName="eventid")
-	public String getEventid() {
-		return eventid;
+	@DynamoDBRangeKey(attributeName="eventname")
+	public String getEventname() {
+		return eventname;
 	}
-	public void setEventid(String eventid) {
-		this.eventid = eventid;
+	public void setEventname(String eventname) {
+		this.eventname = eventname;
 	}
 	
 	@DynamoDBAttribute
-	public String getUserid() {
-		return userid;
+	public String getUsername() {
+		return username;
 	}
-	public void setUserid(String userid) {
-		this.userid = userid;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 	
 	@DynamoDBAttribute
@@ -46,13 +46,16 @@ public class LogEntity {
 	public void setAction(String action) {
 		this.action = action;
 	}
-	public LogEntity(String logid, String eventid, String userid, String action) {
+	public LogEntity(String logid, String eventname, String username, String action) {
 		super();
 		this.logid = logid;
-		this.eventid = eventid;
-		this.userid = userid;
+		this.eventname = eventname;
+		this.username = username;
 		this.action = action;
 	}
+	public LogEntity() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	
-
 }
