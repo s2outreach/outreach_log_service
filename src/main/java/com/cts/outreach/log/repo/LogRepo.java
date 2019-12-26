@@ -9,7 +9,6 @@ import org.springframework.stereotype.Repository;
 
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
-import com.amazonaws.services.dynamodbv2.document.DynamoDB;
 import com.amazonaws.services.dynamodbv2.model.AttributeValue;
 import com.amazonaws.services.dynamodbv2.model.ScanRequest;
 import com.amazonaws.services.dynamodbv2.model.ScanResult;
@@ -44,7 +43,9 @@ public class LogRepo {
 		    String username = usernameAV.getS();
 		    AttributeValue actionAV = item.getOrDefault("action", new AttributeValue());
 		    String action = actionAV.getS();
-		    LogEntity record = new LogEntity(logid, eventname, username, action);
+		    AttributeValue timestampAV = item.getOrDefault("timestamp", new AttributeValue());
+		    String timestamp = timestampAV.getS();
+		    LogEntity record = new LogEntity(logid, eventname, username, action, timestamp);
 		    logs.add(record);
 		}
 		return logs;

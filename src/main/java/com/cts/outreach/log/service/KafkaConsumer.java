@@ -1,6 +1,8 @@
 package com.cts.outreach.log.service;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,6 +26,8 @@ public class KafkaConsumer {
 	public void consumeAddLog(String message) throws IOException{
 		ObjectMapper mapper = new ObjectMapper();
 		LogEntity logRecord = mapper.readValue(message, LogEntity.class);
+		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+		logRecord.setTimestamp(timeStamp);
 		LOGGER.info(logRecord.getAction());
 		logRepo.addLog(logRecord);
 	}
