@@ -20,32 +20,17 @@ public class LogEntity {
 	public String getLogid() {
 		return logid;
 	}
-	public void setLogid(String logid) {
-		this.logid = logid;
-	}
-	
 	@DynamoDBRangeKey(attributeName="eventname")
 	public String getEventname() {
 		return eventname;
 	}
-	public void setEventname(String eventname) {
-		this.eventname = eventname;
-	}
-	
 	@DynamoDBAttribute
 	public String getUsername() {
 		return username;
 	}
-	public void setUsername(String username) {
-		this.username = username;
-	}
-	
 	@DynamoDBAttribute
 	public String getAction() {
 		return action;
-	}
-	public void setAction(String action) {
-		this.action = action;
 	}
 	@DynamoDBAttribute
 	public String getTimestamp() {
