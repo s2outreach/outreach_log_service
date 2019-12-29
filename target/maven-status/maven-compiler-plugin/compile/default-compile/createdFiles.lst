@@ -1,7 +1,0 @@
-com\cts\outreach\log\OutreachLogServiceApplication.class
-com\cts\outreach\log\config\DynamoDBConfigLocal.class
-com\cts\outreach\log\config\DynamoDBConfigAWS.class
-com\cts\outreach\log\repo\LogRepo.class
-com\cts\outreach\log\service\KafkaConsumer.class
-com\cts\outreach\log\controller\LogController.class
-com\cts\outreach\log\entity\LogEntity.class

@@ -1,4 +1,0 @@
-com\cts\outreach\log\DynamoDBConfigLocalTest.class
-com\cts\outreach\log\KafkaConsumerTest.class
-com\cts\outreach\log\OutreachLogServiceApplicationTests.class
-com\cts\outreach\log\LogRepoTest.class

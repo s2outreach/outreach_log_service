@@ -1,7 +1,0 @@
-C:\Users\Admin\git\outreach_log_service\src\main\java\com\cts\outreach\log\repo\LogRepo.java
-C:\Users\Admin\git\outreach_log_service\src\main\java\com\cts\outreach\log\service\KafkaConsumer.java
-C:\Users\Admin\git\outreach_log_service\src\main\java\com\cts\outreach\log\config\DynamoDBConfigAWS.java
-C:\Users\Admin\git\outreach_log_service\src\main\java\com\cts\outreach\log\config\DynamoDBConfigLocal.java
-C:\Users\Admin\git\outreach_log_service\src\main\java\com\cts\outreach\log\entity\LogEntity.java
-C:\Users\Admin\git\outreach_log_service\src\main\java\com\cts\outreach\log\OutreachLogServiceApplication.java
-C:\Users\Admin\git\outreach_log_service\src\main\java\com\cts\outreach\log\controller\LogController.java
