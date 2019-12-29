@@ -1,6 +1,8 @@
 package com.cts.outreach.log;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import org.junit.Before;
@@ -40,7 +42,7 @@ public class LogRepoTest {
 	
 	private static String TABLENAME = "log";
 	private static String ATTRIBUTE1 = "logid";
-	private static String ATTRIBUTE2 = "eventname";
+	private static String ATTRIBUTE2 = "timestamp";
 	
 	@Before
     public void setupClass() throws InterruptedException {
@@ -77,7 +79,7 @@ public class LogRepoTest {
 //        table = dynamoDB.createTable(createTableRequest);
 //        table.waitForActive();
         
-        LogEntity newLog = new LogEntity("1", "Event1", "user1", "user registered", "");
+        LogEntity newLog = new LogEntity("1", "Event1", "user1", "user registered", new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date()));
 		logRepo.addLog(newLog);
         
         System.out.println(table.getDescription());
@@ -86,7 +88,7 @@ public class LogRepoTest {
 	
 	@Test
 	public void addLogTest() {
-		LogEntity newLog = new LogEntity("1", "Event1", "user1", "user registered", "");
+		LogEntity newLog = new LogEntity("1", "Event1", "user1", "user registered", new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date()));
 		logRepo.addLog(newLog);
 	}
 	
