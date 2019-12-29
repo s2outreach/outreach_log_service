@@ -20,7 +20,7 @@ public class LogEntity {
 	public String getLogid() {
 		return logid;
 	}
-	@DynamoDBRangeKey(attributeName="eventname")
+	
 	public String getEventname() {
 		return eventname;
 	}
@@ -32,7 +32,7 @@ public class LogEntity {
 	public String getAction() {
 		return action;
 	}
-	@DynamoDBAttribute
+	@DynamoDBRangeKey(attributeName="timestamp")
 	public String getTimestamp() {
 		return timestamp;
 	}

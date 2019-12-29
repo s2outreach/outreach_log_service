@@ -46,7 +46,7 @@ class OutreachLogServiceApplicationTests {
 		allLogs.add(new LogEntity("3", "Event1", "user3", "user registered", ""));
 		
 		Mockito.when(logRepo.getAllLogs()).thenReturn(allLogs);
-		this.mockMvc.perform(get("/getAllLogs"))
+		this.mockMvc.perform(get("/v1/getAllLogs"))
 		.andExpect(status().isOk());
 	}
 

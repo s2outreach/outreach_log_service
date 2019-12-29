@@ -19,7 +19,7 @@ public class LogController {
 	@Autowired
 	private LogRepo logRepo;
 	
-	@GetMapping("/getAllLogs")
+	@GetMapping("/v1/getAllLogs")
 	public List<LogEntity> getAllLogs() {
 		LOGGER.info("Log requested");
 		return logRepo.getAllLogs();
