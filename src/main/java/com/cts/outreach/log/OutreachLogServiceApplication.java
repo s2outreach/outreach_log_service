@@ -30,10 +30,10 @@ public class OutreachLogServiceApplication {
 	@Profile("aws")
 	public EurekaInstanceConfigBean eurekaInstanceConfig(InetUtils inetUtils) {
 	    EurekaInstanceConfigBean config = new EurekaInstanceConfigBean(inetUtils);
-	    AmazonInfo info = AmazonInfo.Builder.newBuilder().autoBuild("eureka");
+	    AmazonInfo info = AmazonInfo.Builder.newBuilder().autoBuild("log");
 	    config.setHostname(info.get(AmazonInfo.MetaDataKey.publicHostname));
 	    config.setIpAddress(info.get(AmazonInfo.MetaDataKey.publicIpv4));
-	    config.setNonSecurePort(2222);
+	    config.setNonSecurePort(4444);
 	    config.setDataCenterInfo(info);
 	    LOGGER.info(info.get(AmazonInfo.MetaDataKey.publicIpv4));
 	    LOGGER.info(info.get(AmazonInfo.MetaDataKey.publicHostname));
